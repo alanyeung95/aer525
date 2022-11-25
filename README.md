@@ -28,7 +28,7 @@ body-frame transformation, it postmultiplies M -> M * e
 ## lagrange formular
 
 L = K-P (k = kinetic energy and P = potential energy)
-
+K = 0.5*m*v^2 (where m = mass, v = velocity)
 k(q, q') = 0.5*q'T*M(q)*q'
 
 ref: https://www.youtube.com/watch?v=QN-Awth50aA
@@ -52,10 +52,15 @@ calculation rotational velocity (w) -> linear acceleration -> calcuatte force an
 https://www.youtube.com/watch?v=R7FGiA9WF-Y
 
 # manipulator dynamic
+## inertia tensor 
+tensor of  gives us an idea about how the mass is distributed in a rigid body
+
 ## intertia matrix M(q)
 - the inertia matrix is symmetric and positive definite
 
-
+## Mass moment of inertia 
+ a body’s resistance to a change in its rotation direction or the angular momentum
+ 
 ## linear control
 https://www.bilibili.com/video/BV1p7411m7Za?p=21&spm_id_from=pageDriver
 
