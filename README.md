@@ -11,6 +11,14 @@ forward kinematics: x = e(q)
 inverse kinematics: q = e'(x)
 ref: https://www.youtube.com/watch?v=jtei695t4VY
 
+
+## link parameters
+<img src="diagrams/diagram-4.png" alt="drawing" width="400"/>
+
+## DH table to transformation matrix
+<img src="diagrams/diagram-3.png" alt="drawing" width="400"/>
+
+
 ## vector of joint variables
 joint variables (q)
 q = [q1, q2, q3]
