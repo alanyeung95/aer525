@@ -25,9 +25,13 @@ q = [q1, q2, q3]
 for revolute joints, q_i = theta_i
 for prismatic joints, q_i = distance_i
 
+# jacobian matrix and singularities
+jacobian matrix is the velocity of the joint in the system
+
+e.g. V = [x', y', z'] (cartesian space) = [v, w] (joint space where v = linear and w = angular) = J [theat1, theat2] 
 
 
-
+# Dymanic
 
 space-frame transformation, it premultiplies M -> e * M
 
