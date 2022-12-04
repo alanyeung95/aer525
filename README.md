@@ -1,3 +1,10 @@
+# Spatial Descriptions and Transformation Matrices
+
+## ref
+
+1. Spatial Descriptions and Transformation Matrices for Robotic Manipulators https://www.youtube.com/watch?v=4Y1_y9DI_Hw
+2. Spacial Descriptions and Transformations - Worked Example https://www.youtube.com/watch?v=r244ADkuexk
+
 screw asix
 
 prismatic
@@ -30,6 +37,8 @@ for prismatic joints, q_i = distance_i
 jacobian matrix is the velocity of the joint in the system
 
 e.g. V = [x', y', z'] (cartesian space) = [v, w] (joint space where v = linear and w = angular) = J [theat1, theat2]
+
+ref: https://www.youtube.com/watch?v=h2YM0CDzDl4&t=458s
 
 # Dymanic
 
@@ -95,6 +104,10 @@ closed-loop control
 
 https://www.pdfdrive.com
 
-## unknown
+# youtube reference
 
+Compound Transformation Matrices and Inverse Transformation Matrices - Robotic Basics
+https://www.youtube.com/watch?v=sm7d1A2npWA
+
+others
 https://www.youtube.com/watch?v=_GIk3vhiU3c
