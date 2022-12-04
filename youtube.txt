@@ -1,9 +1,0 @@
-Spatial Descriptions and Transformation Matrices for Robotic Manipulators
-https://www.youtube.com/watch?v=4Y1_y9DI_Hw
-
-Spacial Descriptions and Transformations - Worked Example
-https://www.youtube.com/watch?v=r244ADkuexk
-
-Compound Transformation Matrices and Inverse Transformation Matrices - Robotic Basics
-https://www.youtube.com/watch?v=sm7d1A2npWA
-

@@ -1,9 +1,15 @@
+# Spatial Descriptions and Transformation Matrices
+
+## ref
+
+1. Spatial Descriptions and Transformation Matrices for Robotic Manipulators https://www.youtube.com/watch?v=4Y1_y9DI_Hw
+2. Spacial Descriptions and Transformations - Worked Example https://www.youtube.com/watch?v=r244ADkuexk
+
 screw asix
 
 prismatic
 
-
-# kinematics 
+# kinematics
 
 the forward kinematics problem is to find the configuration of the end effector ([b]-frame) relative to the [s]-frame given the vector of joint angles theta (joint variable)
 
@@ -11,41 +17,45 @@ forward kinematics: x = e(q)
 inverse kinematics: q = e'(x)
 ref: https://www.youtube.com/watch?v=jtei695t4VY
 
-
 ## link parameters
+
 <img src="diagrams/diagram-4.png" alt="drawing" width="400"/>
 
 ## DH table to transformation matrix
+
 <img src="diagrams/diagram-3.png" alt="drawing" width="400"/>
 
-
 ## vector of joint variables
+
 joint variables (q)
 q = [q1, q2, q3]
 for revolute joints, q_i = theta_i
 for prismatic joints, q_i = distance_i
 
 # jacobian matrix and singularities
+
 jacobian matrix is the velocity of the joint in the system
 
-e.g. V = [x', y', z'] (cartesian space) = [v, w] (joint space where v = linear and w = angular) = J [theat1, theat2] 
+e.g. V = [x', y', z'] (cartesian space) = [v, w] (joint space where v = linear and w = angular) = J [theat1, theat2]
 
+ref: https://www.youtube.com/watch?v=h2YM0CDzDl4&t=458s
 
 # Dymanic
 
-space-frame transformation, it premultiplies M -> e * M
+space-frame transformation, it premultiplies M -> e \* M
 
-body-frame transformation, it postmultiplies M -> M * e
+body-frame transformation, it postmultiplies M -> M \* e
 
 ## lagrange formular
 
 L = K-P (k = kinetic energy and P = potential energy)
 K = 0.5*m*v^2 (where m = mass, v = velocity)
-k(q, q') = 0.5*q'T*M(q)*q'
+k(q, q') = 0.5*q'T*M(q)\*q'
 
 ref: https://www.youtube.com/watch?v=QN-Awth50aA
 
 ## Newton-Euler Formulation
+
 in the Lagrangian formulation we treat the manipulator as
 a whole and perform the analysis using a Lagrangian function (the difference between the
 kinetic energy and the potential energy). In contrast, in the Newton-Euler formulation we
@@ -59,35 +69,45 @@ is quite different from that of the Lagrangian formulation.
 
 calculation rotational velocity (w) -> linear acceleration -> calcuatte force and torque on a link
 
-
 # static force
+
 https://www.youtube.com/watch?v=R7FGiA9WF-Y
 
 # manipulator dynamic
-## inertia tensor 
-tensor of  gives us an idea about how the mass is distributed in a rigid body
+
+## inertia tensor
+
+tensor of gives us an idea about how the mass is distributed in a rigid body
 
 ## intertia matrix M(q)
+
 - the inertia matrix is symmetric and positive definite
 
-## Mass moment of inertia 
- a body’s resistance to a change in its rotation direction or the angular momentum
- 
+## Mass moment of inertia
+
+a body’s resistance to a change in its rotation direction or the angular momentum
+
 ## linear control
+
 https://www.bilibili.com/video/BV1p7411m7Za?p=21&spm_id_from=pageDriver
 
 open-loop control/ feedforward control
 there is no sensing of the actual joint position to close a feedback loop
+
 - if there is ever any error in the joint position, however, this open-loop approach cannot recover
 
 closed-loop control
+
 - with feedback
 
-
-
 ## ref
+
 https://www.pdfdrive.com
 
+# youtube reference
 
-## unknown
+Compound Transformation Matrices and Inverse Transformation Matrices - Robotic Basics
+https://www.youtube.com/watch?v=sm7d1A2npWA
+
+others
 https://www.youtube.com/watch?v=_GIk3vhiU3c
