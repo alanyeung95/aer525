@@ -40,11 +40,19 @@ e.g. V = [x', y', z'] (cartesian space) = [v, w] (joint space where v = linear a
 
 ref: https://www.youtube.com/watch?v=h2YM0CDzDl4&t=458s
 
+## VELOCITY "PROPAGATION" FROM LINK TO LINK
+the angular velocity of link i + 1 is the same as that of link i plus a new component caused by rotational velocity at joint i + 1
+
 # Dymanic
 
-space-frame transformation, it premultiplies M -> e \* M
+There are two problems related to the dynamics of a manipulator that we wish to solve. 
 
-body-frame transformation, it postmultiplies M -> M \* e
+1. In the first problem, we are given a trajectory point, e, and ë, and we wish to find the required vector of joint torques, r.  
+
+2. The second problem is to calculate how the mechanism will move under application of a set of joint torques. That is, given a torque vector, r, calculate the resulting motion of the manipulator, P, P' and P''. 
+
+## Inertia Tensor
+https://www.youtube.com/watch?v=Ch-VTxTIt0E
 
 ## lagrange formular
 
@@ -103,6 +111,11 @@ closed-loop control
 ## ref
 
 https://www.pdfdrive.com
+
+## others
+space-frame transformation, it premultiplies M -> e \* M
+
+body-frame transformation, it postmultiplies M -> M \* e
 
 # youtube reference
 
