@@ -51,6 +51,9 @@ There are two problems related to the dynamics of a manipulator that we wish to 
 
 2. The second problem is to calculate how the mechanism will move under application of a set of joint torques. That is, given a torque vector, r, calculate the resulting motion of the manipulator, P, P' and P''. 
 
+## manipulator's dynamic equations
+<img src="diagrams/diagram-5.png" alt="drawing" width="400"/>
+
 ## Inertia Tensor
 https://www.youtube.com/watch?v=Ch-VTxTIt0E
 
