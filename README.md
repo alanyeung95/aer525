@@ -51,11 +51,23 @@ There are two problems related to the dynamics of a manipulator that we wish to 
 
 2. The second problem is to calculate how the mechanism will move under application of a set of joint torques. That is, given a torque vector, r, calculate the resulting motion of the manipulator, P, P' and P''. 
 
-## manipulator's dynamic equations
+## manipulator's dynamic equations (The state-space equation)
 <img src="diagrams/diagram-5.png" alt="drawing" width="400"/>
 
 ## Inertia Tensor
 https://www.youtube.com/watch?v=Ch-VTxTIt0E
+
+### inertia tensor
+
+tensor of gives us an idea about how the mass is distributed in a rigid body
+
+### intertia matrix M(q)
+
+- the inertia matrix is symmetric and positive definite
+
+### Mass moment of inertia
+
+a body’s resistance to a change in its rotation direction or the angular momentum
 
 ## lagrange formular
 
@@ -80,23 +92,27 @@ is quite different from that of the Lagrangian formulation.
 
 calculation rotational velocity (w) -> linear acceleration -> calcuatte force and torque on a link
 
-# static force
+## static force
 
 https://www.youtube.com/watch?v=R7FGiA9WF-Y
 
-# manipulator dynamic
+# trajectory generation
 
-## inertia tensor
+time history of position, velocity and acceleration for each degree of freedom
 
-tensor of gives us an idea about how the mass is distributed in a rigid body
+ref: https://www.youtube.com/watch?v=TXHM9xsRUkA&list=PLZaGkBteQK3HQFSWDM7-yRQWTd86DeDIY&index=15
+## path generation methods
 
-## intertia matrix M(q)
+### joint space schemes
+#### cubic polynomials
+<img src="diagrams/diagram-6.png" alt="drawing" width="400"/>
 
-- the inertia matrix is symmetric and positive definite
+#### parabolic blends
+<img src="diagrams/diagram-7.png" alt="drawing" width="400"/>
 
-## Mass moment of inertia
+<img src="diagrams/diagram-8.png" alt="drawing" width="400"/>
 
-a body’s resistance to a change in its rotation direction or the angular momentum
+### cartesian schemes
 
 ## linear control
 
