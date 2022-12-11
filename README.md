@@ -1,5 +1,8 @@
 # Spatial Descriptions and Transformation Matrices
 
+## rotation matrix
+<img src="diagrams/diagram-9.png" alt="drawing" width="400"/>
+
 ## ref
 
 1. Spatial Descriptions and Transformation Matrices for Robotic Manipulators https://www.youtube.com/watch?v=4Y1_y9DI_Hw
