@@ -35,6 +35,10 @@ q = [q1, q2, q3]
 for revolute joints, q_i = theta_i
 for prismatic joints, q_i = distance_i
 
+# inverse kinematics
+
+Given the desired position and orientation of the tool relative to the station, compute the set of joint angles which wili achieve this desired result
+
 # jacobian matrix and singularities
 
 jacobian matrix is the velocity of the joint in the system
