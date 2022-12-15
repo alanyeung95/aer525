@@ -39,6 +39,10 @@ for prismatic joints, q_i = distance_i
 
 Given the desired position and orientation of the tool relative to the station, compute the set of joint angles which wili achieve this desired result
 
+## solvability
+it is difficult to solve if number of degree larger than 6
+<img src="diagrams/diagram-10.png" alt="drawing" width="400"/>
+
 # jacobian matrix and singularities
 
 jacobian matrix is the velocity of the joint in the system
