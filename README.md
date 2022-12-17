@@ -54,6 +54,9 @@ ref: https://www.youtube.com/watch?v=h2YM0CDzDl4&t=458s
 ## VELOCITY "PROPAGATION" FROM LINK TO LINK
 the angular velocity of link i + 1 is the same as that of link i plus a new component caused by rotational velocity at joint i + 1
 
+## Skew-symmetric matrices and the vector cross-product
+<img src="diagrams/diagram-11.png" alt="drawing" width="400"/>
+
 # Dymanic
 
 There are two problems related to the dynamics of a manipulator that we wish to solve. 
