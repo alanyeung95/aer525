@@ -1,3 +1,7 @@
+# Introduction
+## degree of freedom
+<img src="diagrams/diagram-13.png" alt="drawing" width="400"/>
+
 # Spatial Descriptions and Transformation Matrices
 
 ## rotation matrix
@@ -51,6 +55,9 @@ e.g. V = [x', y', z'] (cartesian space) = [v, w] (joint space where v = linear a
 
 ref: https://www.youtube.com/watch?v=h2YM0CDzDl4&t=458s
 
+## general force vectors
+general force = [F, N], where F is a 3 x 1 force vector and N is a 3 x 1 moment vector
+
 ## VELOCITY "PROPAGATION" FROM LINK TO LINK
 the angular velocity of link i + 1 is the same as that of link i plus a new component caused by rotational velocity at joint i + 1
 
@@ -93,16 +100,7 @@ ref: https://www.youtube.com/watch?v=QN-Awth50aA
 
 ## Newton-Euler Formulation
 
-in the Lagrangian formulation we treat the manipulator as
-a whole and perform the analysis using a Lagrangian function (the difference between the
-kinetic energy and the potential energy). In contrast, in the Newton-Euler formulation we
-treat each link of the robot in turn, and write down the equations describing its linear motion
-and its angular motion. Of course, since each link is coupled to other links, these equations
-that describe each link contain coupling forces and torques that appear also in the equations
-that describe neighboring links. By doing a so-called forward-backward recursion, we are
-able to determine all of these coupling terms and eventually to arrive at a description of the
-manipulator as a whole. Thus we see that the philosophy of the Newton-Euler formulation
-is quite different from that of the Lagrangian formulation.
+in the Lagrangian formulation we treat the manipulator as a whole and perform the analysis using a Lagrangian function (the difference between the kinetic energy and the potential energy). In contrast, in the Newton-Euler formulation we treat each link of the robot in turn, and write down the equations describing its linear motion and its angular motion. Of course, since each link is coupled to other links, these equations that describe each link contain coupling forces and torques that appear also in the equations that describe neighboring links. By doing a so-called forward-backward recursion, we are able to determine all of these coupling terms and eventually to arrive at a description of the manipulator as a whole. Thus we see that the philosophy of the Newton-Euler formulation is quite different from that of the Lagrangian formulation.
 
 calculation rotational velocity (w) -> linear acceleration -> calcuatte force and torque on a link
 
@@ -141,11 +139,15 @@ closed-loop control
 
 - with feedback
 
-## ref
+# manipulator-mechanism design
+## compliance
 
-https://www.pdfdrive.com
+“Compliance” is a measure of the susceptibility of a structure to move as a result of an external force. The greater the compliance (i.e., the lower the stiffness), the more easily the structure moves as a result of an applied force.
 
-## others
+## stiffness and deflections
+<img src="diagrams/diagram-12.png" alt="drawing" width="400"/>
+
+# others
 space-frame transformation, it premultiplies M -> e \* M
 
 body-frame transformation, it postmultiplies M -> M \* e
@@ -155,5 +157,11 @@ body-frame transformation, it postmultiplies M -> M \* e
 Compound Transformation Matrices and Inverse Transformation Matrices - Robotic Basics
 https://www.youtube.com/watch?v=sm7d1A2npWA
 
-others
-https://www.youtube.com/watch?v=_GIk3vhiU3c
+exam
+https://www.youtube.com/watch?v=dASdcqgBlqw
+
+# others
+1. https://www.youtube.com/watch?v=_GIk3vhiU3c
+2. https://www.pdfdrive.com
+3. https://see.stanford.edu/materials/aiircs223a/solution4.pdf
+4. https://courses.skule.ca
