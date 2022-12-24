@@ -90,13 +90,23 @@ tensor of gives us an idea about how the mass is distributed in a rigid body
 
 a body’s resistance to a change in its rotation direction or the angular momentum
 
-## lagrange formular
+## Lagrange formular
 
 L = K-P (k = kinetic energy and P = potential energy)
 K = 0.5*m*v^2 (where m = mass, v = velocity)
 k(q, q') = 0.5*q'T*M(q)\*q'
 
+<img src="diagrams/diagram-14.png" alt="drawing" width="400"/>
+
+<img src="diagrams/diagram-15.png" alt="drawing" width="400"/>
+
+<img src="diagrams/diagram-16.png" alt="drawing" width="400"/>
+
 ref: https://www.youtube.com/watch?v=QN-Awth50aA
+
+### potential energy formular
+
+p = mass * height 
 
 ## Newton-Euler Formulation
 
