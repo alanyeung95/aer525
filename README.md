@@ -1,4 +1,14 @@
+# Introduction
+
+## degree of freedom
+
+<img src="diagrams/diagram-13.png" alt="drawing" width="400"/>
+
 # Spatial Descriptions and Transformation Matrices
+
+## rotation matrix
+
+<img src="diagrams/diagram-9.png" alt="drawing" width="400"/>
 
 ## ref
 
@@ -23,6 +33,8 @@ ref: https://www.youtube.com/watch?v=jtei695t4VY
 
 ## DH table to transformation matrix
 
+DH table: https://www.youtube.com/watch?v=DPO9Se6ZqN0&list=PLZaGkBteQK3HQFSWDM7-yRQWTd86DeDIY&index=7
+
 <img src="diagrams/diagram-3.png" alt="drawing" width="400"/>
 
 ## vector of joint variables
@@ -32,8 +44,14 @@ q = [q1, q2, q3]
 for revolute joints, q_i = theta_i
 for prismatic joints, q_i = distance_i
 
-ref:
-https://www.youtube.com/watch?v=DPO9Se6ZqN0&list=PLZaGkBteQK3HQFSWDM7-yRQWTd86DeDIY&index=7
+# inverse kinematics
+
+Given the desired position and orientation of the tool relative to the station, compute the set of joint angles which wili achieve this desired result
+
+## solvability
+
+it is difficult to solve if number of degree larger than 6
+<img src="diagrams/diagram-10.png" alt="drawing" width="400"/>
 
 # jacobian matrix and singularities
 
@@ -43,9 +61,17 @@ e.g. V = [x', y', z'] (cartesian space) = [v, w] (joint space where v = linear a
 
 ref: https://www.youtube.com/watch?v=h2YM0CDzDl4&t=458s
 
+## general force vectors
+
+general force = [F, N], where F is a 3 x 1 force vector and N is a 3 x 1 moment vector
+
 ## VELOCITY "PROPAGATION" FROM LINK TO LINK
 
 the angular velocity of link i + 1 is the same as that of link i plus a new component caused by rotational velocity at joint i + 1
+
+## Skew-symmetric matrices and the vector cross-product
+
+<img src="diagrams/diagram-11.png" alt="drawing" width="400"/>
 
 # Dymanic
 
@@ -78,26 +104,27 @@ double integrals: https://tutorial.math.lamar.edu/classes/calciii/DoubleIntegral
 
 a body’s resistance to a change in its rotation direction or the angular momentum
 
-## lagrange formular
+## Lagrange formular
 
 L = K-P (k = kinetic energy and P = potential energy)
 K = 0.5*m*v^2 (where m = mass, v = velocity)
 k(q, q') = 0.5*q'T*M(q)\*q'
 
+<img src="diagrams/diagram-14.png" alt="drawing" width="400"/>
+
+<img src="diagrams/diagram-15.png" alt="drawing" width="400"/>
+
+<img src="diagrams/diagram-16.png" alt="drawing" width="400"/>
+
 ref: https://www.youtube.com/watch?v=QN-Awth50aA
+
+### potential energy formular
+
+p = mass \* height
 
 ## Newton-Euler Formulation
 
-in the Lagrangian formulation we treat the manipulator as
-a whole and perform the analysis using a Lagrangian function (the difference between the
-kinetic energy and the potential energy). In contrast, in the Newton-Euler formulation we
-treat each link of the robot in turn, and write down the equations describing its linear motion
-and its angular motion. Of course, since each link is coupled to other links, these equations
-that describe each link contain coupling forces and torques that appear also in the equations
-that describe neighboring links. By doing a so-called forward-backward recursion, we are
-able to determine all of these coupling terms and eventually to arrive at a description of the
-manipulator as a whole. Thus we see that the philosophy of the Newton-Euler formulation
-is quite different from that of the Lagrangian formulation.
+in the Lagrangian formulation we treat the manipulator as a whole and perform the analysis using a Lagrangian function (the difference between the kinetic energy and the potential energy). In contrast, in the Newton-Euler formulation we treat each link of the robot in turn, and write down the equations describing its linear motion and its angular motion. Of course, since each link is coupled to other links, these equations that describe each link contain coupling forces and torques that appear also in the equations that describe neighboring links. By doing a so-called forward-backward recursion, we are able to determine all of these coupling terms and eventually to arrive at a description of the manipulator as a whole. Thus we see that the philosophy of the Newton-Euler formulation is quite different from that of the Lagrangian formulation.
 
 calculation rotational velocity (w) -> linear acceleration -> calcuatte force and torque on a link
 
@@ -140,13 +167,17 @@ closed-loop control
 
 - with feedback
 
-## ref
+# manipulator-mechanism design
 
-https://www.pdfdrive.com
+## compliance
+
+“Compliance” is a measure of the susceptibility of a structure to move as a result of an external force. The greater the compliance (i.e., the lower the stiffness), the more easily the structure moves as a result of an applied force.
+
+## stiffness and deflections
+
+<img src="diagrams/diagram-12.png" alt="drawing" width="400"/>
 
 ## others
-
-space-frame transformation, it premultiplies M -> e \* M
 
 body-frame transformation, it postmultiplies M -> M \* e
 
@@ -155,5 +186,12 @@ body-frame transformation, it postmultiplies M -> M \* e
 Compound Transformation Matrices and Inverse Transformation Matrices - Robotic Basics
 https://www.youtube.com/watch?v=sm7d1A2npWA
 
-others
-https://www.youtube.com/watch?v=_GIk3vhiU3c
+exam
+https://www.youtube.com/watch?v=dASdcqgBlqw
+
+# others
+
+1. https://www.youtube.com/watch?v=_GIk3vhiU3c
+2. https://www.pdfdrive.com
+3. https://see.stanford.edu/materials/aiircs223a/solution4.pdf
+4. https://courses.skule.ca
