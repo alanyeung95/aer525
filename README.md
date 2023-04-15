@@ -32,6 +32,9 @@ q = [q1, q2, q3]
 for revolute joints, q_i = theta_i
 for prismatic joints, q_i = distance_i
 
+ref:
+https://www.youtube.com/watch?v=DPO9Se6ZqN0&list=PLZaGkBteQK3HQFSWDM7-yRQWTd86DeDIY&index=7
+
 # jacobian matrix and singularities
 
 jacobian matrix is the velocity of the joint in the system
@@ -41,25 +44,31 @@ e.g. V = [x', y', z'] (cartesian space) = [v, w] (joint space where v = linear a
 ref: https://www.youtube.com/watch?v=h2YM0CDzDl4&t=458s
 
 ## VELOCITY "PROPAGATION" FROM LINK TO LINK
+
 the angular velocity of link i + 1 is the same as that of link i plus a new component caused by rotational velocity at joint i + 1
 
 # Dymanic
 
-There are two problems related to the dynamics of a manipulator that we wish to solve. 
+There are two problems related to the dynamics of a manipulator that we wish to solve.
 
-1. In the first problem, we are given a trajectory point, e, and ë, and we wish to find the required vector of joint torques, r.  
+1. In the first problem, we are given a trajectory point, e, and ë, and we wish to find the required vector of joint torques, r.
 
-2. The second problem is to calculate how the mechanism will move under application of a set of joint torques. That is, given a torque vector, r, calculate the resulting motion of the manipulator, P, P' and P''. 
+2. The second problem is to calculate how the mechanism will move under application of a set of joint torques. That is, given a torque vector, r, calculate the resulting motion of the manipulator, P, P' and P''.
 
 ## manipulator's dynamic equations (The state-space equation)
+
 <img src="diagrams/diagram-5.png" alt="drawing" width="400"/>
 
 ## Inertia Tensor
+
 https://www.youtube.com/watch?v=Ch-VTxTIt0E
+
+double integrals: https://tutorial.math.lamar.edu/classes/calciii/DoubleIntegrals.aspx
 
 ### inertia tensor
 
-tensor of gives us an idea about how the mass is distributed in a rigid body
+- tensor of gives us an idea about how the mass is distributed in a rigid body
+- also it is the resistance of an object to changes in its motion or state of rest
 
 ### intertia matrix M(q)
 
@@ -101,13 +110,17 @@ https://www.youtube.com/watch?v=R7FGiA9WF-Y
 time history of position, velocity and acceleration for each degree of freedom
 
 ref: https://www.youtube.com/watch?v=TXHM9xsRUkA&list=PLZaGkBteQK3HQFSWDM7-yRQWTd86DeDIY&index=15
+
 ## path generation methods
 
 ### joint space schemes
+
 #### cubic polynomials
+
 <img src="diagrams/diagram-6.png" alt="drawing" width="400"/>
 
 #### parabolic blends
+
 <img src="diagrams/diagram-7.png" alt="drawing" width="400"/>
 
 <img src="diagrams/diagram-8.png" alt="drawing" width="400"/>
@@ -132,6 +145,7 @@ closed-loop control
 https://www.pdfdrive.com
 
 ## others
+
 space-frame transformation, it premultiplies M -> e \* M
 
 body-frame transformation, it postmultiplies M -> M \* e
