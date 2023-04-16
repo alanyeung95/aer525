@@ -104,6 +104,15 @@ double integrals: https://tutorial.math.lamar.edu/classes/calciii/DoubleIntegral
 
 a body’s resistance to a change in its rotation direction or the angular momentum
 
+## newton-eulr equation approach
+
+```
+{i}^v_i = R * {i-1}^vC_i-1
+{i}^vC_i = {i}^w'\_i * P + {i}^w_i^2 * P + {i}^v_i
+{i}^F_i  = M * {i}^vC_i
+torque = Z component of {i}^n_i
+```
+
 ## Lagrange formular
 
 L = K-P (k = kinetic energy and P = potential energy)
