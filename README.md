@@ -27,11 +27,13 @@ forward kinematics: x = e(q)
 inverse kinematics: q = e'(x)
 ref: https://www.youtube.com/watch?v=jtei695t4VY
 
-## link parameters
+## DH table to transformation matrix
+
+<img src="diagrams/diagram-17.png" alt="drawing" width="600"/>
+
+<img src="diagrams/diagram-18.png" alt="drawing" width="600"/>
 
 <img src="diagrams/diagram-4.png" alt="drawing" width="400"/>
-
-## DH table to transformation matrix
 
 DH table: https://www.youtube.com/watch?v=DPO9Se6ZqN0&list=PLZaGkBteQK3HQFSWDM7-yRQWTd86DeDIY&index=7
 
@@ -81,6 +83,12 @@ There are two problems related to the dynamics of a manipulator that we wish to 
 
 2. The second problem is to calculate how the mechanism will move under application of a set of joint torques. That is, given a torque vector, r, calculate the resulting motion of the manipulator, P, P' and P''.
 
+## notation
+
+    •	θ or q is used to represent the joint position
+    •	θ̇ or q̇ is used to represent the joint velocity
+    •	θ̈ or q̈ is used to represent the joint acceleration
+
 ## manipulator's dynamic equations (The state-space equation)
 
 <img src="diagrams/diagram-5.png" alt="drawing" width="400"/>
@@ -107,13 +115,25 @@ a body’s resistance to a change in its rotation direction or the angular momen
 ## newton-eulr equation approach
 
 ```
-{i}^v_i = R * {i-1}^vC_i-1
-{i}^vC_i = {i}^w'\_i * P + {i}^w_i^2 * P + {i}^v_i
-{i}^F_i  = M * {i}^vC_i
-torque = Z component of {i}^n_i
+^{i}W_i = R * q' * ^{i}Z_i
+^{i}W'_i = R * ^{i}W'_i-1 * ^{i}Z_i
+^{i}v_i = R * ^{i-1}vC_i-1
+^{i}vC_i = ^{i}w'\_i * P + ^{i}w_i^2 * P + ^{i}v_i
+^{i}F_i  = M * ^{i}v_Ci
+torque = Z component of ^{i}n_i or M(p) * p'' + V(p, p') + G(p) (6.59 formula)
 ```
 
-## Lagrange formular
+### ^{1}F_1
+
+F refers to the force acting on a body or link 1 in a robotic manipulator, expressed in the frame attached to link 1.
+
+### ^{1}N_1
+
+N refers to the torque or moment acting on link 1, expressed in the same frame attached to link 1.
+
+## Lagrange approach
+
+https://www.youtube.com/watch?v=zO5o-tAwOPc
 
 L = K-P (k = kinetic energy and P = potential energy)
 K = 0.5*m*v^2 (where m = mass, v = velocity)
@@ -131,7 +151,7 @@ ref: https://www.youtube.com/watch?v=QN-Awth50aA
 
 p = mass \* height
 
-## Newton-Euler Formulation
+## Newton-Euler vs Lagrange approach
 
 in the Lagrangian formulation we treat the manipulator as a whole and perform the analysis using a Lagrangian function (the difference between the kinetic energy and the potential energy). In contrast, in the Newton-Euler formulation we treat each link of the robot in turn, and write down the equations describing its linear motion and its angular motion. Of course, since each link is coupled to other links, these equations that describe each link contain coupling forces and torques that appear also in the equations that describe neighboring links. By doing a so-called forward-backward recursion, we are able to determine all of these coupling terms and eventually to arrive at a description of the manipulator as a whole. Thus we see that the philosophy of the Newton-Euler formulation is quite different from that of the Lagrangian formulation.
 
